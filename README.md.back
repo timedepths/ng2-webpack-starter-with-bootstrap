@@ -303,7 +303,7 @@ import * as _ from 'lodash';
 * node-pre-gyp ERR in npm install (Windows)
  * install Python x86 version between 2.5 and 3.0 on windows see issue [#626](https://github.com/AngularClass/angular2-webpack-starter/issues/626)
 * `Error:Error: Parse tsconfig error [{"messageText":"Unknown compiler option 'lib'.","category":1,"code":5023},{"messageText":"Unknown compiler option 'strictNullChecks'.","category":1,"code":5023},{"messageText":"Unknown compiler option 'baseUrl'.","category":1,"code":5023},{"messageText":"Unknown compiler option 'paths'.","category":1,"code":5023},{"messageText":"Unknown compiler option 'types'.","category":1,"code":5023}]`
- * remove `node_modules/typescript` and run `npm install typescript@beta`. This repo now uses ts 2.0 
+ * remove `node_modules/typescript` and run `npm install typescript@beta`. This repo now uses ts 2.0
 
 # Support, Questions, or Feedback
 > Contact us anytime for anything about this repo or Angular 2
@@ -339,7 +339,4 @@ enjoy — **AngularClass**
 
 # License
  [MIT](/LICENSE)
-=======
-# ng2-webpack-starter-with-bootstrap
-官网angular2-webpack-starter 添加bootstrap支持的小例子
->>>>>>> c0429d41aad0f5fbe580fb3edc46c1dc2629a3e8
+
