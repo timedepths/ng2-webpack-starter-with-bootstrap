@@ -53,7 +53,7 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#entry
    */
   entry: {
-
+    'styles' :   './src/styles.browser.ts',
     'polyfills': './src/polyfills.browser.ts',
     'vendor':    './src/vendor.browser.ts',
     'main':      './src/main.browser.ts'
@@ -154,6 +154,10 @@ module.exports = {
         loader: 'json-loader'
       },
 
+      {
+        test   : /\.woff|\.woff2|\.svg|.eot|\.ttf/,
+        loader : 'url?prefix=font/&limit=10000'
+      },
       /*
        * to string and css loader support for *.css files
        * Returns file content as string
@@ -162,6 +166,7 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: ['to-string-loader', 'css-loader']
+        // loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       },
 
       /* Raw loader support for *.html
@@ -173,7 +178,7 @@ module.exports = {
         test: /\.html$/,
         loader: 'raw-loader',
         exclude: [helpers.root('src/index.html')]
-      }
+      },
 
     ]
 
@@ -185,6 +190,13 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#plugins
    */
   plugins: [
+
+    new webpack.ProvidePlugin({
+      '$':'jquery',
+      'jQuery':'jquery'
+      }
+    ),
+
 
     /*
      * Plugin: ForkCheckerPlugin
@@ -268,6 +280,7 @@ module.exports = {
       headTags: require('./head-config.common')
     }),
 
+    // new ExtractTextPlugin("styles.css"),
   ],
 
   /*
